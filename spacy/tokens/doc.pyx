@@ -24,7 +24,7 @@ from .token cimport Token
 from ..lexeme cimport Lexeme, EMPTY_LEXEME
 from ..typedefs cimport attr_t, flags_t
 from ..attrs cimport attr_id_t
-from ..attrs cimport LENGTH, POS, LEMMA, TAG, MORPH, DEP, HEAD, SPACY, ENT_IOB
+from ..attrs cimport LENGTH, POS, LEMMA, IPA, TAG, MORPH, DEP, HEAD, SPACY, ENT_IOB
 from ..attrs cimport ENT_TYPE, ENT_ID, ENT_KB_ID, SENT_START, IDX, NORM
 
 from ..attrs import intify_attr, IDS
@@ -58,6 +58,8 @@ cdef attr_t get_token_attr(const TokenC* token, attr_id_t feat_name) nogil:
         return token.norm
     elif feat_name == POS:
         return token.pos
+    elif feat_name == IPA:
+        return token._.ipa
     elif feat_name == TAG:
         return token.tag
     elif feat_name == MORPH:

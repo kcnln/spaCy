@@ -38,6 +38,7 @@ MOD_NAMES = [
     "spacy.pipeline.morphologizer",
     "spacy.pipeline.multitask",
     "spacy.pipeline.ner",
+    "spacy.pipeline.transcriber",
     "spacy.pipeline.pipe",
     "spacy.pipeline.trainable_pipe",
     "spacy.pipeline.sentencizer",

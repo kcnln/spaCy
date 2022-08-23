@@ -43,6 +43,8 @@ cdef class Token:
                 return token.norm
         elif feat_name == POS:
             return token.pos
+        elif feat_name == IPA:
+            return token._.ipa
         elif feat_name == TAG:
             return token.tag
         elif feat_name == MORPH:
@@ -75,6 +77,8 @@ cdef class Token:
             token.norm = value
         elif feat_name == POS:
             token.pos = <univ_pos_t>value
+        elif feat_name == IPA:
+            token._.ipa = value
         elif feat_name == TAG:
             token.tag = value
         elif feat_name == MORPH:

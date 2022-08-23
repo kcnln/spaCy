@@ -21,7 +21,7 @@ class Irish(Language):
 @Irish.factory(
     "lemmatizer",
     assigns=["token.lemma"],
-    default_config={"model": None, "mode": "pos_lookup", "overwrite": False},
+    default_config={"model": None, "mode": "rule", "overwrite": False},
     default_score_weights={"lemma_acc": 1.0},
 )
 def make_lemmatizer(
